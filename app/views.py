@@ -22,8 +22,8 @@ CONF_URL = ''
 oauth = OAuth()
 oauth.register(
     name='gaussianaccess',
-    client_id='gaussianaccessuat',
-    client_secret='M1dQaVPY1TIlwNGljyzikEpp130HPo8uE7QyyfvA',
+    client_id='t',
+    client_secret='',
     server_metadata_url='https://sso-uat.iitb.ac.in/.well-known/openid-configuration',
     client_kwargs={'scope': 'openid'}
 )
