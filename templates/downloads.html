@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Downloads</title>
+    <link rel="stylesheet" href="{% static 'download.css' %}">
+</head>
+<body>
+    <div class="downloads-container">
+        <h2 class="downloads-heading">Software Downloads</h2>
+        <ul class="downloads-list">
+            <li><a href="/media/software1.zip" download>Download Software 1</a></li>
+            <li><a href="/media/software2.exe" download>Download Software 2</a></li>
+            <li><a href="https://example.com/another-tool.tar.gz" target="_blank">External Tool</a></li>
+        </ul>
+    </div>
+</body>
+</html>

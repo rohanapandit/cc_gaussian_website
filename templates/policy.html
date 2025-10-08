@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="{% static 'test_cc/css/policy.css' %}"> -->
+     <link rel="stylesheet" href="{% static 'policy.css' %}">
+  </head>
+
+<body>
+    <div class="policy-container">
+        <h1 class="policy-heading">Privacy & Usage Policies</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            <section class="policy-lines">
+                <div class="line" data-num="1">We collect only data required to provide our service and never sell it.</div>
+                <div class="line" data-num="2">Interactions may be logged solely to improve reliability and security.</div>
+                <div class="line" data-num="3">Information is retained only as long as needed and then securely removed.</div>
+                <div class="line" data-num="4">Access to personal data is limited to authorized staff on a need-to-know basis.</div>
+                <div class="line" data-num="5">Industry-standard encryption protects data in transit and at rest.</div>
+                <div class="line" data-num="6">You can request access, correction, or deletion of your personal information.</div>
+                <div class="line" data-num="7">Some analytics may use third-party services; their policies also apply.</div>
+                <div class="line" data-num="8">Cookie-like tokens maintain sessions and remember preferences securely.</div>
+                <div class="line" data-num="9">In the event of a breach, affected users will be notified promptly.</div>
+                <div class="line" data-num="10">Automated processes may analyze content for quality and personalization.</div>
+                <div class="line" data-num="11">Special-category data is processed only with explicit consent.</div>
+                <div class="line" data-num="12">Always sign out on shared devices to protect your information.</div>
+                <div class="line" data-num="13">Updates to this policy will be announced with effective dates.</div>
+                <div class="line" data-num="14">Contact support to raise privacy concerns or request records.</div>
+                <div class="line" data-num="15">Checking “I agree” confirms you have read and accept these terms.</div>
+            </section>
+
+            <p class="agree">
+                <input type="checkbox" name="agree" required>
+                I accept the policies
+            </p>
+            <button type="submit">Continue to Downloads</button>
+        </form>
+    </div>
+</body>
+</html>

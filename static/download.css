@@ -1,0 +1,90 @@
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #FF5E5B;
+  --shadow: 8px 8px 0px var(--primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+
+/* Animated gradient background (same as login/policy) */
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, #4facfe, #00f2fe, #02A1E8, #38f9d7);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Main white card container */
+.downloads-container {
+  width: 90%;
+  max-width: 600px;
+  background: var(--secondary);
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 40px 50px;
+  text-align: center;
+  position: relative;
+}
+
+.downloads-container::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+/* Heading */
+.downloads-heading {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Download list */
+.downloads-list {
+  list-style: none;
+  padding: 0;
+}
+
+.downloads-list li {
+  margin: 15px 0;
+}
+
+.downloads-list a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--secondary);
+  background: var(--accent);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.downloads-list a:hover {
+  background: #ff3030;
+  transform: scale(1.05);
+}

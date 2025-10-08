@@ -1,0 +1,112 @@
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #FF5E5B;
+  --shadow: 8px 8px 0px var(--primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+
+/* Full-screen gradient background (like login page) */
+body {
+    height: 100vh;
+    background: linear-gradient(-45deg, #4facfe, #00f2fe, #02A1E8, #38f9d7);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Big white card container */
+.policy-container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    padding: 40px 50px;
+    text-align: left;
+    position: relative;
+}
+
+/* Decorative double border */
+.policy-container::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+/* Heading */
+.policy-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+/* Policy lines inside box */
+.policy-lines {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.policy-lines .line {
+    margin-bottom: 12px;
+    padding-left: 8px;
+    position: relative;
+}
+
+.policy-lines .line::before {
+    content: attr(data-num) ".";
+    position: absolute;
+    left: -30px;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Checkbox & label */
+.agree {
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Centered button */
+button {
+    display: block;
+    margin: 0 auto;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 14px 50px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
